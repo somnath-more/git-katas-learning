@@ -112,11 +112,13 @@ View commit history:
 
 ```bash
 git log
-![alt text](image-1.png)
 -- q to exist from terminal
 git log --oneline
-![alt text](image.png)
 ```
+
+![Git log output](image-1.png)
+
+![Git log oneline output](image.png)
 
 ---
 
@@ -130,6 +132,8 @@ git status
 git diff
 ```
 
+![Git diff after modifying a file](image-2.png)
+
 **Practice:**
 
 Stage and commit the change:
@@ -138,6 +142,8 @@ Stage and commit the change:
 git add hello.txt
 git commit -m "Update hello file"
 ```
+
+![Commit after updating hello file](image-3.png)
 
 ---
 
@@ -158,6 +164,8 @@ git commit -m "Add notes and update hello"
 
 `git add .` stages all changes under the current folder.
 
+![Stage all changes output](image-4.png)
+
 ---
 
 ## Kata 09: View Differences
@@ -168,6 +176,8 @@ git commit -m "Add notes and update hello"
 echo "Another change" >> notes.txt
 git diff
 ```
+
+![Git diff output](image-5.png)
 
 After staging:
 
@@ -183,6 +193,8 @@ Commit after reviewing:
 ```bash
 git commit -m "Update notes"
 ```
+
+![Commit update notes output](image-6.png)
 
 ---
 
@@ -200,7 +212,7 @@ git status
 **Important:**
 
 `git restore <file>` removes local unstaged changes from that file.
-
+Noted
 ---
 
 ## Kata 11: Unstage a File
@@ -214,6 +226,8 @@ git status
 git restore --staged notes.txt
 git status
 ```
+
+![Unstage file output](image-7.png)
 
 **Practice:**
 
@@ -235,6 +249,8 @@ git add delete-me.txt
 git commit -m "Delete practice file"
 ```
 
+![Delete file output](image-8.png)
+
 On Windows PowerShell, use:
 
 ```powershell
@@ -252,6 +268,8 @@ git mv notes.txt learning-notes.txt
 git status
 git commit -m "Rename notes file"
 ```
+
+![Rename file output](image-9.png)
 
 **Command meaning:**
 
@@ -278,6 +296,8 @@ echo "debug log" > app.log
 git status
 ```
 
+![Ignored files status output](image-10.png)
+
 Commit the ignore rules:
 
 ```bash
@@ -297,6 +317,8 @@ git branch
 git switch feature/readme-practice
 ```
 
+![Create and switch branch output](image-11.png)
+
 Shortcut:
 
 ```bash
@@ -312,6 +334,8 @@ echo "Branch practice" >> learning-notes.txt
 git add learning-notes.txt
 git commit -m "Practice branch changes"
 ```
+
+![Branch commit output](image-12.png)
 
 ---
 
@@ -350,6 +374,8 @@ Delete the branch after merge:
 git branch -d feature/readme-practice
 ```
 
+![Merge branch output](image-13.png)
+
 ---
 
 ## Kata 18: Create a Merge Conflict
@@ -385,6 +411,8 @@ Merge:
 git merge conflict-demo
 ```
 
+![Merge conflict output](image-14.png)
+
 Git will show a conflict.
 
 ---
@@ -396,11 +424,7 @@ Git will show a conflict.
 Open the conflicted file. You may see markers like:
 
 ```text
-<<<<<<< HEAD
-Main branch line
-=======
 Conflict branch line
->>>>>>> conflict-demo
 ```
 
 Edit the file to the final correct content:
@@ -417,6 +441,8 @@ git add hello.txt
 git commit -m "Resolve hello conflict"
 ```
 
+![Resolve conflict output](image-15.png)
+
 ---
 
 ## Kata 20: View Commit History
@@ -429,6 +455,12 @@ git log --oneline
 git log --oneline --graph --decorate --all
 git show HEAD
 ```
+
+![Git log oneline output](image-16.png)
+
+![Git graph output](image-17.png)
+
+![Git show HEAD output](image-18.png)
 
 **Practice:**
 
@@ -444,6 +476,8 @@ Find your first commit hash.
 git log --oneline
 git switch --detach <commit-hash>
 ```
+
+![Detached HEAD output](image-19.png)
 
 Return to your branch:
 
@@ -467,6 +501,8 @@ git add hello.txt
 git commit --amend -m "Update hello file with forgotten line"
 ```
 
+![Amend commit output](image-20.png)
+
 **Important:**
 
 Use amend carefully after pushing shared commits.
@@ -481,6 +517,8 @@ Use amend carefully after pushing shared commits.
 git log --oneline
 git revert <commit-hash>
 ```
+
+![Revert commit output](image-21.png)
 
 **Why use revert:**
 
@@ -506,6 +544,8 @@ Soft reset keeps changes staged:
 git reset --soft HEAD~1
 git status
 ```
+
+![Soft reset output](image-22.png)
 
 Mixed reset keeps changes unstaged:
 
@@ -538,6 +578,8 @@ git status
 git stash list
 git stash pop
 ```
+
+![Stash changes output](image-23.png)
 
 **Practice:**
 
