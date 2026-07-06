@@ -1,1 +1,2 @@
-Revert commit changes
+Conflict branch line
+Forgotten line
