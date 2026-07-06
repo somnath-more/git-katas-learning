@@ -1,1 +1,2 @@
-Main branch line
+Conflict branch line
+Forgotten line
